@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Footer Tasarımı</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .footer {
+    background-image: url('hillss.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+    min-height: 20vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        
+        .footer::before {
+            content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0); /* Yazıların okunabilirliği için */
+    z-index: 1;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+        }
+        
+        .footer h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .footer p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: #1DA1F2; /* Twitter mavisi */
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+        
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Bize Ulaşın</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon">📱</a> <!-- Twitter ikonu için -->
+                <a href="#" class="social-icon">📷</a> <!-- Instagram için -->
+                <a href="#" class="social-icon">🔗</a> <!-- LinkedIn için -->
+                <a href="#" class="social-icon">📧</a> <!-- Email için -->
+            </div>
+            
+            <div class="copyright">
+                © 2023 Şirket Adı. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
